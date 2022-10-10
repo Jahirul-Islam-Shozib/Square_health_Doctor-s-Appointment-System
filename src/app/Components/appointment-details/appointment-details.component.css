@@ -1,0 +1,33 @@
+.container {
+  padding: 30px;
+}
+
+img {
+  height: 400px;
+  width: 100%;
+}
+.mat-card {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5px;
+  padding: 20px;
+}
+.card-item {
+  padding: 20px;
+}
+.card-content {
+  color: blue;
+}
+.emergency-card,
+.sub-title {
+  background-color: #396cf0;
+  color: #ffffff;
+}
+.container2 {
+  padding-top: 30px;
+}
+.slot-btn {
+  background-color: lightblue;
+}
+.slot-card {
+  margin-top: 20px;
+}

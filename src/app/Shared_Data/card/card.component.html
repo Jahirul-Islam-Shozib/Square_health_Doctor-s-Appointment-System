@@ -1,0 +1,21 @@
+<mat-card fxFlex fxLayout fxLayoutGap="20px">
+  <div>
+    <img mat-card-lg-image [src]="docDetails.imagePath" />
+  </div>
+  <div>
+    <mat-card-title>{{ docDetails.name }}</mat-card-title>
+    <mat-card-subtitle>{{ docDetails.title }}</mat-card-subtitle>
+
+    <mat-card-content>{{ docDetails.degree }}</mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button>View Profile</button>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="onMakeAppointment()"
+      >
+        Make an Appointment
+      </button>
+    </mat-card-actions>
+  </div>
+</mat-card>

@@ -1,0 +1,27 @@
+.navigating-items1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.navigating-items2 {
+  list-style: none;
+  padding: 30px;
+  margin: 0;
+}
+h1 {
+  padding: 20px;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: lightgray;
+}
+.row1 {
+  background-color: white;
+  height: 40px;
+}
+img {
+  width: 100%;
+}

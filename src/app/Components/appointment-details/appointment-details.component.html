@@ -1,0 +1,62 @@
+<div
+  class="container"
+  fxFlex="30%"
+  fxLayout="column"
+  fxLayoutAlign="flex-start"
+  fxLayoutGap="40px"
+>
+  <mat-card>
+    <img [src]="doctorDetails.imagePath" />
+
+    <div class="card-item">
+      <mat-card-title>{{ doctorDetails.name }}</mat-card-title>
+      <mat-card-subtitle>{{ doctorDetails.title }} </mat-card-subtitle>
+      <mat-card-content class="card-content">{{
+        doctorDetails.degree
+      }}</mat-card-content>
+    </div>
+  </mat-card>
+  <mat-card class="emergency-card" fxFlex fxLayout fxLayoutGap="10px">
+    <a><mat-icon>local_hospital</mat-icon></a>
+    <div>
+      <mat-card-title>Emergency Cases</mat-card-title>
+      <mat-card-subtitle class="sub-title">2-800-700-6200</mat-card-subtitle>
+    </div>
+  </mat-card>
+</div>
+<div class="container2" fxFlex="65%">
+  <mat-card>
+    <mat-card-title>About Me: </mat-card-title>
+
+    <mat-card-content>
+      Efficiently myocardinate market-driven innovation via open-source
+      alignments. Dramatically engage high-Phosfluorescently expedite impactful
+      supply chains via focused results. Holistically . Compellingly supply just
+      in time catalysts for change through..
+    </mat-card-content>
+
+    <div>
+      <h2>Appointment Schedules:</h2>
+      <app-calender
+        [docDet]="doctorDetails"
+        (slotEvent)="addAvailableSlots($event)"
+      ></app-calender>
+    </div>
+  </mat-card>
+  <mat-card *ngIf="availableSlots.length > 0" class="slot-card">
+    <div fxLayout="row warp" fxLayoutGap="10px grid" fxLayoutAlign="center">
+      <button
+        class="slot-btn"
+        mat-raised-button
+        fxFlex="30%"
+        *ngFor="let slots of availableSlots"
+        (click)="openDialog(slots)"
+      >
+        {{ slots.start | date: "hh:mm a" }} :
+        {{ slots.end | date: "hh:mm a" }}
+      </button>
+    </div>
+  </mat-card>
+</div>
+
+<!-- <div *ngIf="!doctorDetails.name"><h1>Please Book An AppointMent First</h1></div> -->
